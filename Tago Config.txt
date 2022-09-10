@@ -1,0 +1,44 @@
+login  -  lucas.rocha@easy-br.com
+senha- controlefluxo
+
+https://www.youtube.com/watch?v=Ck55tY7mm1c
+OTA
+
+
+
+Host: mqtt.tago.io
+TCP/IP port: 1883
+TCP/IP port over SSL: 8883
+username: Token
+password: Your Device-Token
+If the Device-token is removed from the device, or if it's deleted, it'll be disconnected from the MQTT broker.
+
+Device para o 1 dashboard
+ESP32
+a6a97d83-b14a-42c9-b9dd-5b67f871735f
+
+
+Login dede 
+
+
+andre@deltamed.ind.br
+teste123
+
+
+
+URL externa para o dashboard do Tago 
+
+https://admin.tago.io/public/dashboard/628bb64d9f79d9001391384a/10076d9f-399e-4258-ad5a-91c300a5e9f1
+
+
+Link para tags dropbox
+
+https://dl.dropboxusercontent.com/s/65t0kvd2hkvs3ho/calibration.txt
+
+
+Token ESP_INOX
+
+a4cba398-e48b-4357-baad-4c23e210c09a
+
+Token ESP_VERZANI
+
