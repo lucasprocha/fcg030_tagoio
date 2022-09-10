@@ -1,0 +1,10 @@
+{
+  "fwVersion": "1.1",
+  "fwURL": "https://dl.dropboxusercontent.com/s/8kfleihl4005tum/main.ino.esp32.bin",
+  "webPageVersion": "1.32",
+  "webPageURL0": "https://dl.dropboxusercontent.com/s/dea497u93nbjt6i/index.html",
+  "webPageURL1": "https://dl.dropboxusercontent.com/s/nsdbyu9xbitpzxs/2.e3e2974d.chunk.js",
+  "webPageURL2": "https://dl.dropboxusercontent.com/s/l8wtlsirx6eu4w5/main.980bb2a6.chunk.js",
+  "webPageURL3": "https://dl.dropboxusercontent.com/s/4n24iuzldsg6plw/runtime-main.a90aa7a1.js",
+  "webPageURL4": "https://dl.dropboxusercontent.com/s/dsu7v9vnq83dwc9/main.7bed1a89.chunk.css"
+}
