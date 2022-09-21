@@ -112,7 +112,7 @@ void setup()
 
   Serial.begin(115200);
   while (!Serial);
- 
+
   pinMode(DIG_IN_8, INPUT);
   pinMode(DIG_IN_9, INPUT);
   pinMode(COM_PRODUCT_ESP, OUTPUT);
@@ -121,11 +121,11 @@ void setup()
 
   digitalWrite(DISP_ESP, HIGH);
   digitalWrite(COM_PRODUCT_ESP, HIGH);  // lucas inicializaçao do com_product_esp com 1 ( habilita o funcionanmento normal da maquina
-  
+
   Serial.print("Dealay0");
   delay(5000);
   Serial.print("Dealay1");
-  
+
   SPI.begin();
   DLOG("DEBUG", "SPI.begin ok\r\n");
   rfid.PCD_Init();
@@ -137,7 +137,7 @@ void setup()
 
   memory_extern_init();
   DLOG("DEBUG", "memory_extern_init() ok\r\n");
-  
+
   ticker.attach(1, calculateFlows);
 
   DLOG("RST", "CPU0 reset reason:\n\r");
@@ -289,7 +289,7 @@ void IRAM_ATTR calculateFlow1() {
       if (WiFi.status() == WL_CONNECTED) {
         send_inputs_to_broker("totalFlow1", totalFlow1);
       } else {
-        memory_extern_write("totalFlow1;"+String(timeClient.getEpochTime())+String(";")+String(totalFlow1));
+        memory_extern_write("totalFlow1;" + String(timeClient.getEpochTime()) + String(";") + String(totalFlow1));
       }
     }
   }
@@ -318,7 +318,7 @@ void IRAM_ATTR calculateFlow2() {
       if (WiFi.status() == WL_CONNECTED) {
         send_inputs_to_broker("totalFlow2", totalFlow2);
       } else {
-        memory_extern_write("totalFlow2;"+String(timeClient.getEpochTime())+String(";")+String(totalFlow2));
+        memory_extern_write("totalFlow2;" + String(timeClient.getEpochTime()) + String(";") + String(totalFlow2));
       }
     }
   }
