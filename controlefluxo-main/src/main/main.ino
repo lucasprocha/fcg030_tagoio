@@ -201,10 +201,15 @@ void loop() {
     timeClient.update();
     input_counter = now;
     input = read_input_expand_i2c();
-    if (old_input != input && WiFi.status() == WL_CONNECTED) {
-      old_input = input;
-      send_inputs_to_broker("inputs", input);
-      send_inputs_to_broker("ps_pin", digitalRead(PS_2) << 1 | digitalRead(PS_1));
+    if (old_input != input) {
+      if (WiFi.status() == WL_CONNECTED) {
+        old_input = input;
+        send_inputs_to_broker("inputs", input);
+        send_inputs_to_broker("ps_pin", digitalRead(PS_2) << 1 | digitalRead(PS_1));
+      } else {
+        memory_extern_write("inputs;" + String(timeClient.getEpochTime()) + String(";") + String(input));
+        memory_extern_write("ps_pin;" + String(timeClient.getEpochTime()) + String(";") + String(digitalRead(PS_2) << 1 | digitalRead(PS_1)));
+      }
     }
   }
 
